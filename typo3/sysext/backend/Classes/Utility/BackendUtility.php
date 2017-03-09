@@ -3994,7 +3994,7 @@ class BackendUtility
                 true,
                 $queryBuilder
             );
-            if (is_array($dRec)) {
+            if (is_array($dRec) && !empty($dRec)) {
                 $dRecord = reset($dRec);
                 return rtrim($dRecord['domainName'], '/');
             }
